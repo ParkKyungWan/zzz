@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{%load static%}
+{%block content%}
+      <div class="container contents" >
+          <p class="texts">우리의 수면 사이클은 무려 <span style="font-weight:bold;">5단계</span>를 거치며 약 <span style="font-weight:bold;">1시간 30분</span>단위로 반복된다고 합니다.</p>
+          <p class="texts">가장 얕은 렘 수면부터, 깊은 숙면에 이르기까지 말이에요</p>
+          <p class="texts">제가 이 <span style="font-weight:bold;">수면 사이클을 계산</span>해서, 더욱 <span style="font-weight:bold;">개운한 잠 시간</span>을 알려드릴게요</p>
+      </div>
+      <div class="container main-content">
+          <button onclick="location.href='/zzz'" class="btn btn-light buttons"><p>지금 잘거에요!</p>
+            <span class="badge badge-pill badge-danger">△</span></button>
+          <button onclick="location.href='/sleep'" class="btn btn-light buttons"><p>자고싶은 시간이 있어요</p>
+            <span class="badge badge-pill badge-info">□</span></button>
+          <button onclick="location.href='/wake'" class="btn btn-light buttons"><p>깨고싶은 시간이 있어요</p>
+            <span class="badge badge-pill badge-success">○</span></button>
+      </div>
+      <div class="container contents" >
+      <!--<img id="zam" src="{%static 'images/잠만보2.png'%}">-->
+      <img id="zam" src="{%static 'images/sleep2.png'%}">
+      </div>
+{%endblock%}

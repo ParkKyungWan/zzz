@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{%load static%}
+{%block content%}
+    <div class="container contents" style="text-align: left;">
+        <h2 style="color:lightgrey">이 시간에 침대에 누우세요</h2>
+    </div>
+
+    {% for texts in times %}
+    <div class="container contents" >
+        {% if forloop.counter <= 3 and forloop.counter >= 2 %}
+            <p class="texts" style="color:lightgreen">{{texts}}</p>
+        {%else%}
+            <p class="texts">{{texts}}</p>
+        {%endif%}
+    </div>
+    {% endfor %}
+    <div class="container contents" style="text-align: left;margin-bottom:150px" >
+        <p class="texts" style="color:gray;margin-top:50px;">※ 개운하게 일어나서 활기찬 하루 보내시길 바라요!   </p>
+    </div>
+    
+{%endblock%}

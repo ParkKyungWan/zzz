@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{%load static%}
+{%block content%}
+    <div class="container contents" style="text-align: left;">
+        <h2 style="color:lightgrey">적절한 기상시간을 찾았어요</h2>
+    </div>
+
+    {% for texts in times %}
+    <div class="container contents" >
+        {% if forloop.counter >= 5 %}
+            <p class="texts" style="color:lightgreen">{{texts}}</p>
+        {%else%}
+            <p class="texts">{{texts}}</p>
+        {%endif%}
+    </div>
+    {% endfor %}
+    <div class="container contents" style="text-align: left;margin-bottom:150px" >
+        <p class="texts" style="color:gray;margin-top:50px;">※ 이상적인 수면시간은 7~9시간 정도라고 합니다. 너무 적게 자도 많이 자도 좋지 않아요.
+        자신에게 맞는 수면시간을 찾고 싶다면, 알람 없이 자면서 평균 시간을 측정해 보는 것도 좋습니다.   </p>
+    </div>
+    
+{%endblock%}

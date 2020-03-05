@@ -1,0 +1,29 @@
+{% load static %}
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="{%static 'css/bootstrap.min.css'%}">
+    <link rel="stylesheet" href="{%static 'css/mycss.css'%}">
+    <!--?{% now "U" %}-->
+    
+    <title>잠만보닷컴</title>
+  </head>
+    <body>
+        <div class="container-fluid main-bar" onclick="location.href='/'">
+            <!--<img id="main_icon" src="{%static 'images/잠만보.png'%}">-->
+            <!--<img id="main_icon2" src="{%static 'images/잠만보.png'%}">-->
+            <span style="font-size:10px;color:rgba(255,255,255,0.8);font-family:hnuB;max-width:30%;margin-bottom:0">잠만보닷컴</span>
+        </div>
+        {% block content %} 
+        {% endblock %} 
+
+
+    
+    </body>
+    <footer class="container-fluid">
+      <p>sleepyti.me에서 같은 기능을 제공합니다.</p>
+      <p>제작: ParkKyungWan</p>
+    </footer>
+</html>
